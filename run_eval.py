@@ -553,6 +553,7 @@ def load_requests(config: DictConfig) -> List[ChatCompletionRequest]:
 
 
 @hydra.main(version_base=None, config_path="./")
+
 def run(config: DictConfig):
     logger.info("<bold>🔎 | Running evaluation | 🔎</bold>")
     client = Provider(
