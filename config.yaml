@@ -1,6 +1,6 @@
 provider: custom_openai # one of [openai, custom_openai, google, anthropic]
 model: mistralai/mistral-small-3.2-24b-instruct:free
-api_key: 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
+api_key: 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
 temperature: 0.0
 max_tokens: 350
 
