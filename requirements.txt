@@ -9,3 +9,4 @@ tqdm
 openai
 anthropic
 google-generativeai
+openai._http_client 

@@ -1,11 +1,10 @@
 provider: custom_openai # one of [openai, custom_openai, google, anthropic]
 model: mistralai/mistral-small-3.2-24b-instruct:free
-api_key: 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
+api_key: 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
 temperature: 0.0
 max_tokens: 350
 
 system_message: # set a custom system message
-
 # (for custom OpenAI-compatible API)
 provider_kwargs:
   base_url: https://openrouter.ai/api/v1 # example for vllm default
@@ -27,5 +26,5 @@ num_threads: 30
 auto_resume: true # resume from last checkpoint
 
 checkpointing:
-  enabled: true
+  enabled: false
   checkpoint_interval: 50

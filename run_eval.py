@@ -452,7 +452,6 @@ def process(
     if config.data.few_shot_file:
         dataset_name += "_few_shot"
 
-
     output_file = (
         Path(config.data.output_dir)
         / f"{config.provider}_{clean_model(config.model)}_{dataset_name}.json"
@@ -554,11 +553,10 @@ def load_requests(config: DictConfig) -> List[ChatCompletionRequest]:
 
 
 @hydra.main(version_base=None, config_path="./", config_name="config.yaml")
-
 def run(config: DictConfig):
     logger.info("<bold>🔎 | Running evaluation | 🔎</bold>")
     client = Provider(
-        api_key= config.api_key,
+        api_key=config.api_key,
         provider=ProviderEnum(config.provider),
         **config.get("provider_kwargs", {}),
     )
