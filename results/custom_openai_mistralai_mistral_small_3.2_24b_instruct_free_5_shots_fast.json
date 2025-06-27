@@ -1,0 +1,28 @@
+{
+  "metrics": {
+    "accuracy": 1.0,
+    "accuracy:std": 0.0
+  },
+  "results": [
+    {
+      "index": 0,
+      "provider": "custom_openai",
+      "model": "mistralai/mistral-small-3.2-24b-instruct:free",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Sei un assistente utile."
+        },
+        {
+          "role": "user",
+          "content": "Rispondi alla seguente domanda a scelta multipla sull'argomento 'chirurgia generale'. La tua risposta deve essere nel seguente formato: 'LETTERA' (senza virgolette) dove LETTERA \u00e8 una tra ABCDE. Scrivi solo la lettera corrispondente alla tua risposta senza spiegazioni.\n\nuna donna di 42 anni, senza precedenti anamnestici importanti eccezion fatta per un taglio cesareo 12 anni prima,viene ricoverata d'urgenza per intensi dolori colici, vomito, distensione addominale ed alvo chiuso a feci e gas. la diretta addome in piedi evidenzia la presenza di livelli idro-aerei del piccolo intestino. verso quale causa di ostruzione intestinale ti orienti?\n\nA) adenocarcinoma\nB) malattia di crohn\nC) sindrome aderenziale\nD) ileo biliare\nE) colite ulcerosa\n\nRisposta:"
+        }
+      ],
+      "answer": "C",
+      "temperature": 0.0,
+      "max_tokens": 350,
+      "fast": true,
+      "output": "C"
+    }
+  ]
+}

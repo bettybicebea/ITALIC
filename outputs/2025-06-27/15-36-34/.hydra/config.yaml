@@ -1,0 +1,22 @@
+provider: openai
+model: mistralai/mistral-small-3.2-24b-instruct:free
+api_key: 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
+temperature: 0.0
+max_tokens: 350
+system_message: null
+provider_kwargs:
+  base_url: https://openrouter.ai/api/v1
+rate_limiting:
+  enabled: false
+  requests_per_minute: 15
+limit: null
+fast: true
+data:
+  data_file: ./area_clinica_2016_2019_finale.jsonl
+  few_shot_file: null
+  output_dir: results
+num_threads: 30
+auto_resume: true
+checkpointing:
+  enabled: true
+  checkpoint_interval: 50
