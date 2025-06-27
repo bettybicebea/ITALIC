@@ -1,0 +1,22 @@
+provider: custom_openai
+model: mistralai/mistral-small-3.2-24b-instruct:free
+api_key: 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
+temperature: 0.0
+max_tokens: 350
+system_message: null
+provider_kwargs:
+  base_url: https://openrouter.ai/api/v1
+rate_limiting:
+  enabled: false
+  requests_per_minute: 15
+limit: null
+fast: true
+data:
+  data_file: ./5_shots.jsonl
+  few_shot_file: null
+  output_dir: results
+num_threads: 30
+auto_resume: true
+checkpointing:
+  enabled: false
+  checkpoint_interval: 50
