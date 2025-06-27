@@ -1,6 +1,6 @@
 provider: custom_openai # one of [openai, custom_openai, google, anthropic]
-model: mii-llm/maestrale-chat-0.4-beta
-api_key: EMPTY # default vllm key
+model: mistralai/mistral-small-3.2-24b-instruct:free
+api_key: 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 # default vllm key
 temperature: 0.0
 max_tokens: 350
 
@@ -8,7 +8,7 @@ system_message: # set a custom system message
 
 # (for custom OpenAI-compatible API)
 provider_kwargs:
-  base_url: http://localhost:8000/v1 # example for vllm default
+  base_url: https://openrouter.ai/api/v1 # example for vllm default
 
 rate_limiting:
   enabled: false
@@ -18,8 +18,8 @@ limit: # limit to n examples
 fast: true # use CoT or not
 
 data:
-  data_file: ./italic.jsonl
-  few_shot_file: ./5_shots.jsonl # Set as null to run zero-shot evaluation
+  data_file: ./area_clinica_2016_2019_finale.jsonl
+  few_shot_file: null # Set as null to run zero-shot evaluation
   output_dir: results
 
 num_threads: 30
